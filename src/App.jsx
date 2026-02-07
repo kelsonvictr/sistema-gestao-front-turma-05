@@ -1,10 +1,10 @@
 import React from 'react'
-import Fornecedores from './pages/Fornecedores'
+import CadastrarFornecedor from './pages/CadastrarFornecedor'
 
 const App = () => {
   return (
     <div>
-      <Fornecedores />
+      <CadastrarFornecedor />
     </div>
   )
 }
