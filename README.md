@@ -1,4 +1,4 @@
-# 🎓 GUIA DO PROFESSOR - Sistema de Gestão React
+# 🎓 GUIA DO ALUNO - Sistema de Gestão React
 
 > **Documento de apoio para aula de live-coding**  
 > Fluxo completo do projeto: Fornecedores → Produtos → Clientes → Navbar → Página Inicial
