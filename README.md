@@ -32,3 +32,8 @@ npm install
 - `axios` → Requisições HTTP para API
 - `bootstrap` e `react-bootstrap` → Estilização e componentes UI
 - `json-server`-> back/banco
+
+### 3. Configurando o JSON SERVEr
+
+- Pegar o data/db.json do repo
+- Configurar o package.json para usar esse arquivo
