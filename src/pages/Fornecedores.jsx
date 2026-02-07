@@ -40,10 +40,54 @@ const Fornecedores = () => {
                                     <i className="bi bi-building text-primary me-2"></i>
                                     {fornecedor.nome}
                                 </Card.Title>
-                                <p>
-                                    
+                                <p className="mb-2">
+                                    <small className="text-muted d-block">
+                                        CNPJ
+                                    </small>
+                                    {fornecedor.cnpj}
+                                </p>
+                                <p className="mb-2">
+                                    <small className="text-muted d-block">
+                                        <i className="bi bi-envelope me-2"></i>
+                                        Email
+                                    </small>
+                                    {fornecedor.email}
+                                </p>
+                                <p className="mb-2">
+                                    <small className="text-muted d-block">
+                                         <i className="bi bi-telephone me-2"></i>
+                                        Telefone
+                                    </small>
+                                    {fornecedor.telefone}
+                                </p>
+                                <p className="mb-2">
+                                    <small className="text-muted d-block">
+                                        <i className="bi bi-geo-alt me-2"></i>
+                                        Localização
+                                    </small>
+                                    {fornecedor.cidade}/{fornecedor.uf}
                                 </p>
                             </Card.Body>
+                            <Card.Footer className="bg-white border-0">
+                                <div className="d-flex gap-2">
+                                    <Button
+                                        variant="outline-secondary"
+                                        size="sm"
+                                        className="flex-grow-1"
+                                    >
+                                        <i className="bi bi-pencil me-1"></i>Editar
+                                        </Button>
+                                        <Button
+                                            variant="outline-danger"
+                                            size="sm"
+                                            className="flex-grow-1"
+                                        >
+                                            <i className="bi bi-trash me-1">
+                                            </i>
+                                            Excluir
+                                        </Button>
+                                </div>
+                            </Card.Footer>
                         </Card>
                     </Col>
                 ))
