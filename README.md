@@ -33,7 +33,12 @@ npm install
 - `bootstrap` e `react-bootstrap` → Estilização e componentes UI
 - `json-server`-> back/banco
 
-### 3. Configurando o JSON SERVEr
+- No componente avô, main.jsx, fazer o import do bootstrap manual
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+
+### 3. Configurando o JSON SERVER
 
 - Pegar o data/db.json do repo
 - Configurar o package.json para usar esse arquivos
@@ -42,3 +47,8 @@ npm install
 http://localhost:3000/fornecedores
 http://localhost:3000/produtos
 http://localhost:3000/clientes
+
+### 4. Começando as pages
+
+- 1. Fornecedores.jsx
+(rafce) -> go!
