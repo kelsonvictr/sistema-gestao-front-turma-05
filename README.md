@@ -36,4 +36,9 @@ npm install
 ### 3. Configurando o JSON SERVEr
 
 - Pegar o data/db.json do repo
-- Configurar o package.json para usar esse arquivo
+- Configurar o package.json para usar esse arquivos
+- Enpoints disponibilizados pelo json-server:
+
+http://localhost:3000/fornecedores
+http://localhost:3000/produtos
+http://localhost:3000/clientes
