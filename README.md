@@ -37,6 +37,9 @@ npm install
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+Tenho que fazer os imports também no index.html
+(pegar o do prof, o arquivo completo)
+
 
 ### 3. Configurando o JSON SERVER
 
