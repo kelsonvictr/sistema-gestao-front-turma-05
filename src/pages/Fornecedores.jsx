@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Button } from 'react-bootstrap'
+import { Button, Card, Col, Row } from 'react-bootstrap'
 
 const Fornecedores = () => {
   
@@ -29,6 +29,28 @@ const Fornecedores = () => {
                 Novo Fornecedor
             </Button>
         </div>
+
+        <Row className="g-4">
+            {
+                fornecedores.map(fornecedor => (
+                    <Col md={6} lg={4} key={fornecedor.id}>
+                        <Card className="h-100 shadow-sm  border-0">
+                            <Card.Body>
+                                <Card.Title>
+                                    <i className="bi bi-building text-primary me-2"></i>
+                                    {fornecedor.nome}
+                                </Card.Title>
+                                <p>
+                                    
+                                </p>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))
+            }
+        </Row>
+
+
 
     </div>
   )
