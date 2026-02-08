@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Form, Row, Col } from 'react-bootstrap'
+import { Card, Form, Row, Col, Button } from 'react-bootstrap'
 import { useState } from 'react'
 
 const CadastrarFornecedor = () => {
