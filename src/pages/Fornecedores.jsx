@@ -1,15 +1,32 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 
 const Fornecedores = () => {
   
     const [fornecedores, setFornecedores] = useState([])
+    const [searchParams, setSearchParams] = useSearchParams()
+    const [mensagem, setMensagem] = useState("")
+
+
 
     useEffect(() => {
         carregarFornecedores()
-    }, [])
+
+        const msg = searchParams.get('msg')
+
+        if (msg == "cadastrado") {
+            setMensagem("Fornecedor cadastrado com sucesso!")
+        } else if (msg === "editado") {
+            setMensagem("Fornecedor atualizado com sucesso!")
+        }
+
+        if (msg) { 
+            setSearchParams({})
+        }
+
+    }, [searchParams, setSearchParams])
 
     const carregarFornecedores = () => {
         axios.get("http://localhost:3000/fornecedores")
@@ -30,6 +47,13 @@ const Fornecedores = () => {
                 Novo Fornecedor
             </Button>
         </div>
+
+        {mensagem && (
+        <Alert variant="success" dismissible onClose={() => setMensagem('')}>
+          <i className="bi bi-check-circle me-2"></i>
+          {mensagem}
+        </Alert>
+      )}
 
         <Row className="g-4">
             {
