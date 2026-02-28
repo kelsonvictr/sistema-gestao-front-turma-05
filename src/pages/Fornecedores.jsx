@@ -119,6 +119,7 @@ const Fornecedores = () => {
                                             variant="outline-danger"
                                             size="sm"
                                             className="flex-grow-1"
+                                            onClick={() => excluirFornecedor(fornecedor.id)}
                                         >
                                             <i className="bi bi-trash me-1">
                                             </i>
