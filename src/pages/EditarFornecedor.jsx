@@ -35,7 +35,43 @@ const EditarFornecedor = () => {
             setCidade(response.data.cidade)
             setUf(response.data.uf)
         })
+        .catch(error => console.error("Erro ao carregar fornecedor: ", error))
     }, [id])
+
+    const buscarCep = () => {
+        if (cep.length === 8) {
+            axios.get(`https://viacep.com.br/ws/${cep}/json`)
+            .then(response => {
+                if (!response.data.error) {
+                    setLogradouro(response.data.logradouro)
+                    setBairro(response.data.bairro)
+                    setCidade(response.data.localidade)
+                    setUf(response.data.uf)
+                }
+            })
+            .catch(error => console.error("Erro ao buscar CEP: ", error))
+        }
+    }
+
+    const atualizarFornecedor = (e) => {
+        e.preventDefault() // Impede que a página seja recarregada
+
+        const fornecedorAtualizado = {
+            nome,
+            cnpj,
+            telefone,
+            cep,
+            logradouro,
+            numero,
+            bairro,
+            cidade,
+            uf
+        }
+
+        axios.put(`http://localhost:3000/fornecedores/${id}`, fornecedorAtualizado)
+        .then(() => navigate("/fornecedores?msg=editado"))
+        .catch(error => console.error("Erro ao atualizar fornecedor: ", error))
+    }
 
 
   return (
