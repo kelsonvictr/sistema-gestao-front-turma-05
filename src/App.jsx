@@ -4,6 +4,7 @@ import Inicial from './pages/Inicial'
 import Fornecedores from './pages/Fornecedores'
 import CadastrarFornecedor from './pages/CadastrarFornecedor'
 import Navbar from './components/Navbar'
+import EditarFornecedor from './pages/EditarFornecedor'
 
 
 const App = () => {
@@ -15,7 +16,8 @@ const App = () => {
         <Routes>
         <Route path="/" element={<Inicial />} />
         <Route path="/fornecedores" element={<Fornecedores />} />
-        <Route path="/cadastrar-fornecedor" element={<CadastrarFornecedor />} /> 
+        <Route path="/cadastrar-fornecedor" element={<CadastrarFornecedor />} />
+        <Route path="/editar-fornecedor/:id" element={<EditarFornecedor />} />
       </Routes>
       </div>
     </div>
