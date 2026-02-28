@@ -1,17 +1,16 @@
 {
   "fornecedores": [
     {
-      "id": "1",
-      "nome": "Distribuidora ABC",
+      "nome": "Distribuidora ABC 2",
       "cnpj": "12.345.678/0001-99",
-      "email": "contato@abc.com",
       "telefone": "(11) 99999-0001",
       "cep": "01310-100",
       "logradouro": "Avenida Paulista",
       "numero": "1000",
       "bairro": "Bela Vista",
       "cidade": "São Paulo",
-      "uf": "SP"
+      "uf": "SP",
+      "id": "1"
     },
     {
       "id": "2",

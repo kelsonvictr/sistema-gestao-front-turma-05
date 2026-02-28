@@ -1,9 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { Card, Form, Row, Col, Button } from 'react-bootstrap'
 import axios from 'axios'
 
 const EditarFornecedor = () => {
+
+    const navigate = useNavigate()
     
     // receber o id que vem da url para editar
     const { id } = useParams()
@@ -85,7 +88,7 @@ const EditarFornecedor = () => {
         
         <Card className="shadow-sm border-0">
             <Card.Body className="p-4">
-                <Form>
+                <Form onSubmit={atualizarFornecedor}>
                     <Row>
                         <Col md={6}>
                             <Form.Group className="mb-3">

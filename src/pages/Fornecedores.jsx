@@ -75,6 +75,8 @@ const Fornecedores = () => {
                                         variant="outline-secondary"
                                         size="sm"
                                         className="flex-grow-1"
+                                        as={Link}
+                                        to={`/editar-fornecedor/${fornecedor.id}`}
                                     >
                                         <i className="bi bi-pencil me-1"></i>Editar
                                         </Button>
