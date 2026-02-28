@@ -1,8 +1,9 @@
 {
   "fornecedores": [
     {
-      "nome": "Distribuidora ABC 2",
+      "nome": "Distribuidora ABC 4",
       "cnpj": "12.345.678/0001-99",
+      "email": "kelson.victr2@gmail.com",
       "telefone": "(11) 99999-0001",
       "cep": "01310-100",
       "logradouro": "Avenida Paulista",

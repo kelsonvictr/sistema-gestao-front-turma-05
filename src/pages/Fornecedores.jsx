@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Col, Row } from 'react-bootstrap'
+import { Alert, Button, Card, Col, Row } from 'react-bootstrap'
 import { Link, useSearchParams } from 'react-router-dom'
 
 const Fornecedores = () => {
@@ -33,6 +33,17 @@ const Fornecedores = () => {
         .then(response => setFornecedores(response.data))
         .catch(error => console.error("Erro ao carregar fornecedores: ", error))
     }
+
+    const excluirFornecedor = (id) => {
+    if (window.confirm("Tem certeza que deseja excluir este fornecedor?")) {
+      axios.delete(`http://localhost:3000/fornecedores/${id}`)
+        .then(() => {
+          setMensagem("Fornecedor excluído com sucesso!")
+          carregarFornecedores()
+        })
+        .catch(error => console.error("Erro ao excluir fornecedor: ", error))
+    }
+  }
 
     return (
     <div>

@@ -62,6 +62,7 @@ const EditarFornecedor = () => {
         const fornecedorAtualizado = {
             nome,
             cnpj,
+            email,
             telefone,
             cep,
             logradouro,
