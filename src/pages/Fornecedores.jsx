@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Fornecedores = () => {
   
@@ -24,7 +25,7 @@ const Fornecedores = () => {
                 <i className="bi bi-building me-2"></i>
                 Fornecedores
             </h2>
-            <Button variant="light">
+            <Button variant="light" as={Link} to="/cadastrar-fornecedor">
                 <i className="bi bi-plus-lg me-2"></i>
                 Novo Fornecedor
             </Button>

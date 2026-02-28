@@ -1,7 +1,7 @@
 {
   "fornecedores": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Distribuidora ABC",
       "cnpj": "12.345.678/0001-99",
       "email": "contato@abc.com",
@@ -14,7 +14,7 @@
       "uf": "SP"
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Fornecedor XYZ",
       "cnpj": "98.765.432/0001-11",
       "email": "vendas@xyz.com",
@@ -37,12 +37,24 @@
       "bairro": "Jardim Oceania",
       "cidade": "João Pessoa",
       "uf": "PB",
-      "id": 3
+      "id": "3"
+    },
+    {
+      "id": "8383",
+      "nome": "Testando 123",
+      "cnpj": "11222121212",
+      "telefone": "83986608771",
+      "cep": "58037-328",
+      "logradouro": "Rua Josefa Miranda Freire",
+      "numero": "105",
+      "bairro": "Jardim Oceania",
+      "cidade": "João Pessoa",
+      "uf": "PB"
     }
   ],
   "produtos": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Notebook Dell",
       "descricao": "Notebook Dell Inspiron 15, 8GB RAM, 256GB SSD",
       "preco": 3500,
@@ -50,7 +62,7 @@
       "fornecedorId": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Mouse Logitech",
       "descricao": "Mouse sem fio Logitech MX Master 3",
       "preco": 450,
@@ -58,7 +70,7 @@
       "fornecedorId": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "Teclado Mecânico",
       "descricao": "Teclado mecânico RGB, switches blue",
       "preco": 280,
@@ -68,7 +80,7 @@
   ],
   "clientes": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "João Silva",
       "cpf": "123.456.789-00",
       "email": "joao@email.com",
@@ -81,7 +93,7 @@
       "uf": "SP"
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Maria Santos",
       "cpf": "987.654.321-00",
       "email": "maria@email.com",

@@ -1,8 +1,12 @@
 import React from 'react'
 import { Card, Form, Row, Col, Button } from 'react-bootstrap'
 import { useState } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const CadastrarFornecedor = () => {
+
+    const navigate = useNavigate()
 
     const [nome, setNome] = useState("")
     const [cnpj, setCnpj] = useState("")
@@ -15,6 +19,26 @@ const CadastrarFornecedor = () => {
     const [cidade, setCidade] = useState('')
     const [uf, setUf] = useState('')
 
+    const salvarFornecedor = (e) => {
+        e.preventDefault() // Impede que a página seja recarregada
+
+        const novoFornecedor = {
+            nome,
+            cnpj,
+            telefone,
+            cep,
+            logradouro,
+            numero,
+            bairro,
+            cidade,
+            uf
+        }
+
+        axios.post("http://localhost:3000/fornecedores", novoFornecedor)
+        .then(() => navigate("/fornecedores?msg=cadastrado"))
+        .catch(error => console.error("Erro ao cadastrar fornecedor: ", error))
+    }
+
   return (
     <div>
         <div className="d-flex justify-content-between align-items-center mb-4">
@@ -26,7 +50,7 @@ const CadastrarFornecedor = () => {
         
         <Card className="shadow-sm border-0">
             <Card.Body className="p-4">
-                <Form>
+                <Form onSubmit={salvarFornecedor}>
                     <Row>
                         <Col md={6}>
                             <Form.Group className="mb-3">
