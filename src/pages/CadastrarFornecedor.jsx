@@ -19,6 +19,21 @@ const CadastrarFornecedor = () => {
     const [cidade, setCidade] = useState('')
     const [uf, setUf] = useState('')
 
+    const buscarCep = () => {
+        if (cep.length === 8) {
+            axios.get(`https://viacep.com.br/ws/${cep}/json`)
+            .then(response => {
+                if (!response.data.error) {
+                    setLogradouro(response.data.logradouro)
+                    setBairro(response.data.bairro)
+                    setCidade(response.data.localidade)
+                    setUf(response.data.uf)
+                }
+            })
+            .catch(error => console.error("Erro ao buscar CEP: ", error))
+        }
+    }
+
     const salvarFornecedor = (e) => {
         e.preventDefault() // Impede que a página seja recarregada
 
@@ -113,6 +128,7 @@ const CadastrarFornecedor = () => {
                                     value={cep}
                                     onChange={(e) => setCep(e.target.value)}
                                     placeholder="Apenas números"
+                                    onBlur={buscarCep}
                                     
                                 />
                         </Form.Group>
